@@ -12,7 +12,7 @@ module OmniAuth
         :authorize_path => '/oauth/authorize',
         :token_url => '/oauth/token',
       }
-
+      
       uid { raw_info['id'].to_s }
 
       info do
@@ -37,7 +37,10 @@ module OmniAuth
         options[:callback_path] = previous_callback_path
         super
       end
-
+      def callback_url
+        options[:redirect_uri] || (full_host + script_name + callback_path)
+      end
+       
       def mock_call!(*)
         options.delete(:callback_path)
         super
