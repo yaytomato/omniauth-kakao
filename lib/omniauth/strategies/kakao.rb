@@ -17,8 +17,8 @@ module OmniAuth
 
       info do
         {
-          'name' => raw_properties['nickname'],
-          'image' => raw_properties['thumbnail_image'],
+          'name' => raw_properties['nickname'] || '',
+          'image' => raw_properties['thumbnail_image'] || '',
         }
       end
 
