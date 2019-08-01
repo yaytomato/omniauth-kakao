@@ -3,7 +3,7 @@ $:.push File.expand_path("../lib", __FILE__)
 require "omniauth-kakao/version"
 
 Gem::Specification.new do |s|
-  s.name        = "omniauth-kakao"
+  s.name        = "omniauth-kakao-bucketplace"
   s.version     = Omniauth::Kakao::VERSION
   s.platform    = Gem::Platform::RUBY
   s.authors     = ["Shayne Sung-Hee Kang"]
@@ -13,7 +13,7 @@ Gem::Specification.new do |s|
   s.description = %q{OmniAuth strategy for Kakao(http://developers.kakao.com/)}
   s.license     = "MIT"
 
-  s.rubyforge_project = "omniauth-kakao"
+  s.rubyforge_project = "omniauth-kakao-bucketplace"
 
   s.files         = `git ls-files`.split("\n")
   s.test_files    = `git ls-files -- {test,spec,features}/*`.split("\n")
